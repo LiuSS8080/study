@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_platform
+    username: root
+    password: root
+
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  messages:
+    basename: i18n.messages
+    encoding: utf-8
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 8080

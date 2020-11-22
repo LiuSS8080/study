@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../plugins/vue v2.6.12.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h3>{{message}}</h3>
+        <p>
+            <select style="width: 300px;">
+                <option v-for="item in movies">{{item}}</option>
+            </select>
+        </p>
+    </div>
+<script>
+    const app = new Vue({
+        el: '#app', //用于挂载管理的元素
+        data: {      //定义数据
+            message: '你好',
+            movies: ['1', '2', '3', '4']
+        }
+    })
+</script>
+</body>
+</html>

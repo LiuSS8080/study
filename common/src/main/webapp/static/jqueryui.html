@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./plugins/jquery-ui-1.12.1/jquery-ui.css"/>
+    <style>
+        .app{
+            width: 200px;
+            height: 50px;
+            border: #1b5fcc 1px solid;
+        }
+    </style>
+    <script src="./plugins/jquery-3.4.1.min.js"></script>
+    <script src="./plugins/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/table.js"></script>
+
+</head>
+<body>
+    <div id="app" style="padding:5px 10px">
+        <h1>jquery-ui拖动</h1>
+        <ul class="sortable">
+            <li class="load"><div class="app">1111111</div></li>
+            <li class="load"><div class="app">22222</div></li>
+            <li class="load"><div class="app">3333</div></li>
+            <li class="load"><div class="app">444</div></li>
+            <li class="load"><div class="app">555</div></li>
+            <li class="load"><div class="app">666</div></li>
+            <li class="load"><div class="app">777</div></li>
+            <li class="load"><div class="app">888</div></li>
+        </ul>
+    </div>
+<script>
+    /**
+     * 拖动组件
+     */
+    $(".sortable").sortable({
+        cursor:"move",
+        items:".load",
+        opacity: "0.6"//拖动透明度
+    })
+
+</script>
+</body>
+</html>
